@@ -24,6 +24,7 @@ gulp.task('webserver', function() {
 gulp.task('jade', ['sass'], function() {
 
   var locals = {
+    _ : _
   }
  
   gulp.src('./src/templates/index.jade')
@@ -76,6 +77,7 @@ gulp.task('git', function () {
 gulp.task('watch', function() {
   gulp.watch('./src/stylesheets/*.scss', ['sass']);
   gulp.watch('./src/templates/*.jade', ['jade']);
+  gulp.watch('./src/js/*.js', ['scripts']);
 });
 
 gulp.task('build', ['sass', 'scripts', 'jade', 'images', 'pdfs']);
