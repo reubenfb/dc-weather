@@ -2,7 +2,7 @@ d3 = require('d3');
 
 'use strict'
 
-d3.request("http://api.wunderground.com/api/ad2a396136d9d1ae/hourly/q/DC/Washington.json", function(err, response){
+d3.request("https://api.wunderground.com/api/ad2a396136d9d1ae/hourly/q/DC/Washington.json", function(err, response){
 
 		console.log(response)
 		var data = JSON.parse(response.responseText).hourly_forecast;
