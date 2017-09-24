@@ -70,9 +70,9 @@ gulp.task('git', function () {
     .pipe(deploy())
 });
 
-// gulp.task('deploy', function(done){
-//   runSequence('build', 'git', done);
-// });
+gulp.task('deploy', function(done){
+  runSequence('build', 'git', done);
+});
 
 gulp.task('watch', function() {
   gulp.watch('./src/stylesheets/*.scss', ['sass']);
